@@ -1,7 +1,27 @@
+img {
+  width: auto;
+  height: auto;
+  vertical-align: bottom; }
+
 .inner {
   width: 100%;
   max-width: 980px;
   margin: auto; }
+
+.flex {
+  display: flex; }
+
+.flex * {
+  flex: 0 0 auto; }
+
+.col {
+  display: flex; }
+
+.col > * {
+  flex: 0 0 auto; }
+
+.row {
+  width: 100%; }
 
 .ad {
   width: 100%; }
@@ -15,3 +35,14 @@
 
 .header .row {
   padding: 8px 0; }
+
+.header .contactList {
+  border-top: 1px solid #ccc;
+  border-bottom: 1px solid #ccc;
+  background-color: #ffffcc;
+  text-align: center; }
+
+.header .contactList li {
+  display: inline-block;
+  margin-right: 0.25rem;
+  margin-left: 0.25rem; }

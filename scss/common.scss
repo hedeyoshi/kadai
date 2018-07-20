@@ -1,13 +1,33 @@
 // created 20180720
 
 // common
+img {
+  vertical-align: bottom;
+  width: auto;
+  height: auto;
+}
 .inner {
   width: 100%;
   max-width: 980px;
   margin: auto;
 }
+.flex {
+  display: flex;
+  * {
+    flex: 0 0 auto;
+  }
+}
+.col {
+  display: flex;
+  & > * {
+    flex: 0 0 auto;
+  }
+}
+.row {
+  width: 100%;
+}
 
-// section
+// unique
 .ad {
   width: 100%;
 }
@@ -20,5 +40,21 @@
   }
   .row {
     padding: 8px 0;
+  }
+
+  .contactList {
+    background-color: #ffffcc;
+    border: {
+      top: 1px solid #ccc;
+      bottom: 1px solid #ccc;
+    }
+    text-align: center;
+    li {
+      margin: {
+        left: 0.25rem;
+        right: 0.25rem;
+      }
+      display: inline-block;
+    }
   }
 }
