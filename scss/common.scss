@@ -13,15 +13,11 @@ img {
 }
 .flex {
   display: flex;
-  * {
+  & > * {
     flex: 0 0 auto;
   }
 }
 .col {
-  display: flex;
-  & > * {
-    flex: 0 0 auto;
-  }
 }
 .row {
   width: 100%;
@@ -56,5 +52,11 @@ img {
       }
       display: inline-block;
     }
+  }
+}
+
+.main {
+  section {
+    margin-bottom: 1rem;
   }
 }
