@@ -53,6 +53,6 @@ gulp.task("js", function () {
 
 // Rerun the task when a file changes
 gulp.task("default", function () {
-  gulp.watch("./sass/**/*.scss", ["sass"]);
+  gulp.watch("./scss/**/*.scss", ["sass"]);
   gulp.watch("./js/**/*.js", ["js"]);
 });

@@ -11,3 +11,14 @@
 .ad {
   width: 100%;
 }
+
+.header {
+  position: relative;
+  h1 {
+    background-color: #dddddd;
+    text-align: center;
+  }
+  .row {
+    padding: 8px 0;
+  }
+}

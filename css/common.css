@@ -5,3 +5,13 @@
 
 .ad {
   width: 100%; }
+
+.header {
+  position: relative; }
+
+.header h1 {
+  background-color: #dddddd;
+  text-align: center; }
+
+.header .row {
+  padding: 8px 0; }
