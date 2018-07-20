@@ -1,6 +1,9 @@
 // created 20180720
 
 // common
+body {
+  font-size: 14px;
+}
 img {
   vertical-align: bottom;
   width: auto;
@@ -21,6 +24,16 @@ img {
 }
 .row {
   width: 100%;
+}
+.label {
+  display: block;
+  background-color: #fd4545;
+  border-radius: 6px;
+  text-align: center;
+  font-size: 12px;
+}
+a {
+  text-decoration: none;
 }
 
 // unique
@@ -59,4 +72,21 @@ img {
   section {
     margin-bottom: 1rem;
   }
+  .itemList {
+    display: flex;
+    margin: -5px;
+    flex-wrap: wrap;
+    background-color: #e4e4e4;
+    li {
+      flex: 1 0 20%;
+      margin: 5px;
+      background-color: #fff;
+    }
+    a {
+    }
+  }
+}
+
+.footer {
+  border-bottom: 1px solid #333;
 }

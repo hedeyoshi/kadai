@@ -1,3 +1,6 @@
+body {
+  font-size: 14px; }
+
 img {
   width: auto;
   height: auto;
@@ -16,6 +19,16 @@ img {
 
 .row {
   width: 100%; }
+
+.label {
+  display: block;
+  border-radius: 6px;
+  background-color: #fd4545;
+  font-size: 12px;
+  text-align: center; }
+
+a {
+  text-decoration: none; }
 
 .ad {
   width: 100%; }
@@ -43,3 +56,17 @@ img {
 
 .main section {
   margin-bottom: 1rem; }
+
+.main .itemList {
+  display: flex;
+  flex-wrap: wrap;
+  margin: -5px;
+  background-color: #e4e4e4; }
+
+.main .itemList li {
+  flex: 1 0 20%;
+  margin: 5px;
+  background-color: #fff; }
+
+.footer {
+  border-bottom: 1px solid #333; }
