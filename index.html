@@ -24,20 +24,25 @@
   <header class="header">
     <h1>こどもから大人まで楽しめるxxxxx公式ショッピングサイト!!</h1>
     <div class="inner">
-      <div class="row flex">
-        <div><img src="http://placehold.jp/000000/ffffff/195x35.png" alt="" class="logo"></div>
+      <div class="row flex align-items-center navMenu">
+        <div class="flex-item"><img src="http://placehold.jp/000000/ffffff/195x35.png" alt="" class="logo"></div>
 
-        <ul class="flex">
-          <li><a href="">はじめての方へ</a></li>
-          <li><a href="">ご利用ガイド</a></li>
-          <li><a href="">よくある質問</a></li>
-          <li><a href="">閲覧履歴</a></li>
-          <li><a href="">公式アプリ</a></li>
-        </ul>
-        <div class="userName">こんにちはゲストさん！</div>
+        <!-- globalNavi -->
+        <nav class="flex-item globalNav">
+          <ul class="flex align-items-center">
+            <li class="flex-item"><a href="">はじめての方へ<br>ご利用ガイド</a></li>
+            <li class="flex-item"><a href="">よくある質問</a></li>
+            <li class="flex-item"><a href="">閲覧履歴</a></li>
+            <li class="flex-item"><a href="">公式アプリ</a></li>
+          </ul>
+        </nav>
+        <!-- / globalNavi -->
+        <div class="flex-item userName">
+          <strong class="font-bold">こんにちはゲストさん！</strong>
+        </div>
       </div>
-      <div class="row flex">
-        <ul class="flex">
+      <div class="row flex align-items-center searchMenu">
+        <ul class="flex-item flex searchCategoryList">
           <li><a href="">キャラクターから探す</a></li>
           <li><a href="">ショップから探す</a></li>
           <li><a href="">商品ジャンルから探す</a></li>
@@ -45,17 +50,17 @@
           <li><a href="">ポイントを貯める</a></li>
         </ul>
 
-        <div class="searchArea">
+        <div class="flex-item search">
           <form action="">
             <input type="text">
             <button>検索</button>
           </form>
         </div>
       </div>
-      <ul class="userArea">
-        <li><a href="">ログイン</a></li>
-        <li><a href="">会員登録</a></li>
-        <li><a href="">カート</a></li>
+      <ul class="flex userArea">
+        <li class="flex-item"><a class="login" href="">ログイン</a></li>
+        <li class="flex-item"><a class="entry" href="">会員登録</a></li>
+        <li class="flex-item"><a class="cart" href="">カート</a></li>
       </ul>
     </div>
     <ul class="contactList">
@@ -70,18 +75,37 @@
   <div class="main">
     <div class="inner">
 
-
       <!-- slider -->
-      <div class="slider">
-        <ul>
-          <li><img src="http://placehold.jp/000000/ffffff/440x250.png" alt=""></li>
-          <li><img src="http://placehold.jp/000000/ffffff/212x120.png" alt=""></li>
-          <li><img src="http://placehold.jp/000000/ffffff/212x120.png" alt=""></li>
-          <li><img src="http://placehold.jp/000000/ffffff/212x120.png" alt=""></li>
-          <li><img src="http://placehold.jp/000000/ffffff/212x120.png" alt=""></li>
-        </ul>
+      <div class="slider swiper-container">
+        <div class="swiper-wrapper">
+          <ul class="slide-item swiper-slide">
+            <li class="item-big"><img src="http://placehold.jp/000000/ffffff/440x250.png" alt=""></li>
+            <li class="item-small"><img src="http://placehold.jp/000000/ffffff/212x120.png" alt=""></li>
+            <li class="item-small"><img src="http://placehold.jp/000000/ffffff/212x120.png" alt=""></li>
+            <li class="item-small"><img src="http://placehold.jp/000000/ffffff/212x120.png" alt=""></li>
+            <li class="item-small"><img src="http://placehold.jp/000000/ffffff/212x120.png" alt=""></li>
+          </ul>
+          <ul class="slide-item swiper-slide">
+            <li class="item-big"><img src="http://placehold.jp/000000/ffffff/440x250.png" alt=""></li>
+            <li class="item-small"><img src="http://placehold.jp/000000/ffffff/212x120.png" alt=""></li>
+            <li class="item-small"><img src="http://placehold.jp/000000/ffffff/212x120.png" alt=""></li>
+            <li class="item-small"><img src="http://placehold.jp/000000/ffffff/212x120.png" alt=""></li>
+            <li class="item-small"><img src="http://placehold.jp/000000/ffffff/212x120.png" alt=""></li>
+          </ul>
+          <ul class="slide-item swiper-slide">
+            <li class="item-big"><img src="http://placehold.jp/000000/ffffff/440x250.png" alt=""></li>
+            <li class="item-small"><img src="http://placehold.jp/000000/ffffff/212x120.png" alt=""></li>
+            <li class="item-small"><img src="http://placehold.jp/000000/ffffff/212x120.png" alt=""></li>
+            <li class="item-small"><img src="http://placehold.jp/000000/ffffff/212x120.png" alt=""></li>
+            <li class="item-small"><img src="http://placehold.jp/000000/ffffff/212x120.png" alt=""></li>
+          </ul>
+        </div>
+        <!-- If we need navigation buttons -->
+        <div class="swiper-button-prev"></div>
+        <div class="swiper-button-next"></div>
       </div>
       <!-- / slider -->
+
 
       <!-- newItem -->
       <section class="section newItem">
@@ -220,6 +244,17 @@
     </div>
   </footer>
   <!-- footer -->
+  <script src="js/swiper.min.js"></script>
+  <script>
+    var mySwiper = new Swiper('.swiper-container', {
+      speed: 400,
+      spaceBetween: 100,
+      navigation: {
+        nextEl: '.swiper-button-next',
+        prevEl: '.swiper-button-prev',
+      }
+    });
+  </script>
 </body>
 
 </html>

@@ -1,5 +1,8 @@
 // created 20180720
 
+// swiper
+@import 'swiper';
+
 // var
 // breakpoint
 $xs: 0;
@@ -19,9 +22,22 @@ $xl: 1200px;
     @content;
   }
 }
+@mixin clearfix() {
+  &::after {
+    display: block;
+    content: '';
+    clear: both;
+  }
+}
 
 // common
 // tag
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
 html {
   font-size: 0.725rem;
   line-height: 1.4;
@@ -37,6 +53,10 @@ a {
 }
 
 // class
+.font-bold {
+  font-weight: bold;
+}
+
 .list-unstyled {
   list-style: none;
 }
@@ -91,6 +111,7 @@ a {
 
 // その他
 .col {
+  width: auto;
 }
 .row {
   width: 100%;
@@ -112,15 +133,53 @@ a {
 }
 .header {
   position: relative;
+  margin-bottom: 10px;
+  .inner {
+    position: relative;
+  }
   h1 {
+    height: 20px;
+    padding: 2px;
     background-color: #dddddd;
     text-align: center;
+    margin-bottom: 8px;
   }
-  .row {
-    padding: 8px 0;
+  .navMenu {
+    padding-right: 235px;
+    margin-bottom: 8px;
+    .globalNav {
+      margin-left: 4px;
+      .flex-item {
+        padding: 0 8px;
+        & + .flex-item {
+          padding: 4px 8px;
+          border-left: 1px solid #aaa;
+        }
+      }
+    }
+    .userName {
+      margin-left: 4px;
+      padding: 9px 12px;
+      border-left: 1px dotted #aaa;
+    }
+  }
+  .searchMenu {
+    margin-bottom: 2px;
+    .searchCategoryList {
+      a {
+        display: inline-block;
+        padding: 8px;
+        font-size: 1.25rem;
+      }
+    }
+    .search {
+      margin-left: auto;
+    }
   }
 
   .contactList {
+    height: 20px;
+    padding: 2px;
     background-color: #ffffcc;
     border: {
       top: 1px solid #ccc;
@@ -135,14 +194,56 @@ a {
       display: inline-block;
     }
   }
+
+  .userArea {
+    z-index: 10;
+    position: absolute;
+    top: -28px;
+    right: 20px;
+    width: 195px;
+    li {
+      flex: 1 0 auto;
+    }
+    a {
+      display: block;
+      height: 72px;
+      padding-top: 52px;
+      border: 1px solid #aaa;
+      border-top: none;
+      text-align: center;
+      border-radius: 0 0 5px 5px;
+    }
+    .login {
+      background-color: #c9ff90;
+    }
+    .entry {
+      background-color: #fff890;
+    }
+    .cart {
+      background-color: #ffe591;
+    }
+  }
 }
 
 .main {
   .slider {
+    margin-bottom: 20px;
     img {
       width: auto;
       height: auto;
       max-width: 100%;
+    }
+    .slide-item {
+      @include clearfix;
+      padding: 0 48px;
+      .item-big {
+        float: left;
+        margin-right: 12px;
+      }
+      .item-small {
+        float: left;
+        margin: 3px 0 0 4px;
+      }
     }
   }
   .section {
